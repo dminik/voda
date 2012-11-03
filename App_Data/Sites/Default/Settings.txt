@@ -1,0 +1,12 @@
+Name: Default
+DataProvider: SqlServer
+DataConnectionString: Data Source=localhost;Initial Catalog=voda;Persist Security Info=false;User ID=sa;Password=ciborg
+DataPrefix: null
+RequestUrlHost: null
+RequestUrlPrefix: null
+State: Running
+EncryptionAlgorithm: AES
+EncryptionKey: 0489DF1789B6602AD5E0E797EDA717566A1E5216AAD720A8B75BB5DEEA9436DA
+HashAlgorithm: HMACSHA256
+HashKey: AEAF63A28DBD6D697CE01C0A1D0BF06BA47F45EB219576535B3F577F17FE4649C6178E946B30FEE34CFE56CDA13E3DC10E5FC2F3BBB8BF8B28D040E1289B94EE
+Themes: 

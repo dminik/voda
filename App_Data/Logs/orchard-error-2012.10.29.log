@@ -1,0 +1,1287 @@
+2012-10-29 00:48:12,767 [26] Orchard.Recipes.Services.RecipeStepExecutor - Recipe execution 0522c6c082464174aecc3360ede39ea8 was cancelled because a step failed to execute
+System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Orchard.Environment.Features.FeatureManager.<EnableFeature>b__1e(String currentFeatureId, IDictionary`2 featuresState) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 147
+   at Orchard.Environment.Features.FeatureManager.GetAffectedFeatures(String featureId, IDictionary`2 features, Func`3 getAffectedDependencies) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 195
+   at Orchard.Environment.Features.FeatureManager.EnableFeature(String featureId, IDictionary`2 availableFeatures, Boolean force) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 153
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Environment.Features.FeatureManager.EnableFeatures(IEnumerable`1 featureIds, Boolean force) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 72
+   at Orchard.Recipes.RecipeHandlers.FeatureRecipeHandler.ExecuteRecipeStep(RecipeContext recipeContext)
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+2012-10-29 00:48:12,888 [26] Orchard.Exceptions.DefaultExceptionPolicy - An unexpected exception was caught
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> Orchard.OrchardCoreException: Recipe execution with id 0522c6c082464174aecc3360ede39ea8 was cancelled because the "Feature" step failed to execute. The following exception was thrown: Sequence contains no matching element. Refer to the recipe journal for more information.
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+   at Orchard.Recipes.Services.RecipeScheduler.ExecuteWork(String executionId)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Events.DefaultOrchardEventBus.TryInvokeMethod(IEventHandler eventHandler, Type interfaceType, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in c:\Build\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:line 84
+   at Orchard.Events.DefaultOrchardEventBus.TryInvoke(IEventHandler eventHandler, String interfaceName, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in c:\Build\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:line 73
+   at Orchard.Events.DefaultOrchardEventBus.TryNotifyHandler(IEventHandler eventHandler, String messageName, String interfaceName, String methodName, IDictionary`2 eventData, IEnumerable& returnValue) in c:\Build\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:line 52
+2012-10-29 00:48:15,195 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:15,198 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:15,305 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:15,306 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:16,934 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:16,935 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:17,034 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:17,036 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:17,123 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:17,124 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:17,204 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:17,205 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:17,290 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:17,291 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:17,389 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:17,390 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:17,469 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:17,470 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:48:17,554 [25] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'Orchard.Search'
+System.IO.FileNotFoundException: Could not load file or assembly 'Orchard.Search' or one of its dependencies. Не удается найти указанный файл.
+File name: 'Orchard.Search'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:48:17,556 [25] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'Orchard.Search' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:21,294 [26] Orchard.Recipes.Services.RecipeStepExecutor - Recipe execution 934a8a0462d84ebd9469d73106298374 was cancelled because a step failed to execute
+System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Linq.Enumerable.WhereEnumerableIterator`1.MoveNext()
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Orchard.Environment.Features.FeatureManager.<EnableFeature>b__1e(String currentFeatureId, IDictionary`2 featuresState) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 147
+   at Orchard.Environment.Features.FeatureManager.GetAffectedFeatures(String featureId, IDictionary`2 features, Func`3 getAffectedDependencies) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 195
+   at Orchard.Environment.Features.FeatureManager.EnableFeature(String featureId, IDictionary`2 availableFeatures, Boolean force) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 153
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Environment.Features.FeatureManager.EnableFeatures(IEnumerable`1 featureIds, Boolean force) in c:\Build\Orchard\src\Orchard\Environment\Features\FeatureManager.cs:line 72
+   at Orchard.Recipes.RecipeHandlers.FeatureRecipeHandler.ExecuteRecipeStep(RecipeContext recipeContext)
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+2012-10-29 00:49:21,345 [26] Orchard.Exceptions.DefaultExceptionPolicy - An unexpected exception was caught
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> Orchard.OrchardCoreException: Recipe execution with id 934a8a0462d84ebd9469d73106298374 was cancelled because the "Feature" step failed to execute. The following exception was thrown: Sequence contains no matching element. Refer to the recipe journal for more information.
+   at Orchard.Recipes.Services.RecipeStepExecutor.ExecuteNextStep(String executionId)
+   at Orchard.Recipes.Services.RecipeScheduler.ExecuteWork(String executionId)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Orchard.Events.DefaultOrchardEventBus.TryInvokeMethod(IEventHandler eventHandler, Type interfaceType, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in c:\Build\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:line 84
+   at Orchard.Events.DefaultOrchardEventBus.TryInvoke(IEventHandler eventHandler, String interfaceName, String methodName, IDictionary`2 arguments, IEnumerable& returnValue) in c:\Build\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:line 73
+   at Orchard.Events.DefaultOrchardEventBus.TryNotifyHandler(IEventHandler eventHandler, String messageName, String interfaceName, String methodName, IDictionary`2 eventData, IEnumerable& returnValue) in c:\Build\Orchard\src\Orchard\Events\DefaultOrchardEventBus.cs:line 52
+2012-10-29 00:49:24,261 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:24,262 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:24,346 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:24,347 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:25,958 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:25,960 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:26,041 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:26,042 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:26,124 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:26,125 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:26,205 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:26,206 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:26,287 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:26,288 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:26,836 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:26,838 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:26,927 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:26,928 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:49:27,012 [9] Orchard.Environment.DefaultAssemblyLoader - Error loading assembly 'SchoolPointe.RelatedContent'
+System.IO.FileNotFoundException: Could not load file or assembly 'SchoolPointe.RelatedContent' or one of its dependencies. Не удается найти указанный файл.
+File name: 'SchoolPointe.RelatedContent'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at Orchard.Environment.DefaultAssemblyLoader.LoadWorker(String shortName, String fullName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 56
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.DefaultAssemblyLoader.Load(String assemblyName) in c:\Build\Orchard\src\Orchard\Environment\IAssemblyLoader.cs:line 26
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+
+2012-10-29 00:49:27,014 [9] Orchard.Environment.Extensions.Compilers.DefaultExtensionCompiler - Assembly reference 'SchoolPointe.RelatedContent' for project '/Modules/SchoolPointe.Menus/SchoolPointe.Menus.csproj' cannot be loaded
+2012-10-29 00:52:51,341 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:51,989 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:51,993 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:51,997 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:51,999 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:52,002 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:52,005 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:52,008 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:52,011 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 00:52:52,016 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 15:40:56,153 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,236 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,244 [7] Orchard.Alias.Implementation.Updater.AliasHolderUpdater - Exception during Alias refresh
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id695_0_, this_.Path as Path695_0_, this_.RouteValues as RouteVal3_695_0_, this_.Source as Source695_0_, this_.Action_id as Action5_695_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc ]
+[SQL: SELECT this_.Id as Id695_0_, this_.Path as Path695_0_, this_.RouteValues as RouteVal3_695_0_, this_.Source as Source695_0_, this_.Action_id as Action5_695_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Alias.Implementation.Storage.AliasStorage.List()
+   at Orchard.Alias.Implementation.Updater.AliasHolderUpdater.Refresh()
+2012-10-29 15:40:56,297 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,297 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,297 [7] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id725_0_, this_.TaskType as TaskType725_0_, this_.ScheduledUtc as Schedule3_725_0_, this_.ContentItemVersionRecord_id as ContentI4_725_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ? ]
+Positional parameters:  #0>29.10.2012 13:40:56
+[SQL: SELECT this_.Id as Id725_0_, this_.TaskType as TaskType725_0_, this_.ScheduledUtc as Schedule3_725_0_, this_.ContentItemVersionRecord_id as ContentI4_725_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ?] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Orchard.Core.Scheduling.Services.ScheduledTaskExecutor.Sweep() in c:\Build\Orchard\src\Orchard.Web\Core\Scheduling\Services\ScheduledTaskExecutor.cs:line 36
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:40:56,559 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,559 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,559 [7] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id771_4_, this_.Number as Number771_4_, this_.Published as Published771_4_, this_.Latest as Latest771_4_, this_.Data as Data771_4_, this_.ContentItemRecord_id as ContentI6_771_4_, titlepartr3_.Id as Id697_0_, titlepartr3_.Title as Title697_0_, titlepartr3_.ContentItemRecord_id as ContentI3_697_0_, contentite1_.Id as Id770_1_, contentite1_.Data as Data770_1_, contentite1_.ContentType_id as ContentT3_770_1_, blogpartre2_.Id as Id737_2_, blogpartre2_.Description as Descript2_737_2_, blogpartre2_.PostCount as PostCount737_2_, contenttyp8_.Id as Id772_3_, contenttyp8_.Name as Name772_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = ? ORDER BY titlepartr3_.Title asc ]
+Positional parameters:  #0>True
+[SQL: SELECT this_.Id as Id771_4_, this_.Number as Number771_4_, this_.Published as Published771_4_, this_.Latest as Latest771_4_, this_.Data as Data771_4_, this_.ContentItemRecord_id as ContentI6_771_4_, titlepartr3_.Id as Id697_0_, titlepartr3_.Title as Title697_0_, titlepartr3_.ContentItemRecord_id as ContentI3_697_0_, contentite1_.Id as Id770_1_, contentite1_.Data as Data770_1_, contentite1_.ContentType_id as ContentT3_770_1_, blogpartre2_.Id as Id737_2_, blogpartre2_.Description as Descript2_737_2_, blogpartre2_.PostCount as PostCount737_2_, contenttyp8_.Id as Id772_3_, contenttyp8_.Name as Name772_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = ? ORDER BY titlepartr3_.Title asc] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentQuery.ContentQuery`1.Orchard.ContentManagement.IContentQuery<T>.List() in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 191
+   at Orchard.Blogs.Services.BlogService.Get(VersionOptions versionOptions)
+   at Orchard.Blogs.Routing.BlogPathConstraintUpdator.Refresh()
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:40:56,579 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,579 [7] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:40:56,579 [7] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id771_3_, this_.Number as Number771_3_, this_.Published as Published771_3_, this_.Latest as Latest771_3_, this_.Data as Data771_3_, this_.ContentItemRecord_id as ContentI6_771_3_, contentite1_.Id as Id770_0_, contentite1_.Data as Data770_0_, contentite1_.ContentType_id as ContentT3_770_0_, sitesettin4_.Id as Id711_1_, sitesettin4_.SiteSalt as SiteSalt711_1_, sitesettin4_.SiteName as SiteName711_1_, sitesettin4_.SuperUser as SuperUser711_1_, sitesettin4_.PageTitleSeparator as PageTitl5_711_1_, sitesettin4_.HomePage as HomePage711_1_, sitesettin4_.SiteCulture as SiteCult7_711_1_, sitesettin4_.ResourceDebugMode as Resource8_711_1_, sitesettin4_.PageSize as PageSize711_1_, sitesettin4_.SiteTimeZone as SiteTim10_711_1_, contenttyp5_.Id as Id772_2_, contenttyp5_.Name as Name772_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ? ]
+Positional parameters:  #0>1 #1>True
+[SQL: SELECT this_.Id as Id771_3_, this_.Number as Number771_3_, this_.Published as Published771_3_, this_.Latest as Latest771_3_, this_.Data as Data771_3_, this_.ContentItemRecord_id as ContentI6_771_3_, contentite1_.Id as Id770_0_, contentite1_.Data as Data770_0_, contentite1_.ContentType_id as ContentT3_770_0_, sitesettin4_.Id as Id711_1_, sitesettin4_.SiteSalt as SiteSalt711_1_, sitesettin4_.SiteName as SiteName711_1_, sitesettin4_.SuperUser as SuperUser711_1_, sitesettin4_.PageTitleSeparator as PageTitl5_711_1_, sitesettin4_.HomePage as HomePage711_1_, sitesettin4_.SiteCulture as SiteCult7_711_1_, sitesettin4_.ResourceDebugMode as Resource8_711_1_, sitesettin4_.PageSize as PageSize711_1_, sitesettin4_.SiteTimeZone as SiteTim10_711_1_, contenttyp5_.Id as Id772_2_, contenttyp5_.Name as Name772_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ?] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentManager.GetManyImplementation(QueryHints hints, Action`2 predicate) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 328
+   at Orchard.ContentManagement.DefaultContentManager.Get(Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 140
+   at Orchard.ContentManagement.ContentGetExtensions.Get[T](IContentManager manager, Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentExtensions.cs:line 160
+   at Orchard.Core.Settings.Services.SiteService.GetSiteSettings() in c:\Build\Orchard\src\Orchard.Web\Core\Settings\Services\SiteService.cs:line 46
+   at Orchard.Settings.CurrentSiteWorkContext.Get[T](String name) in c:\Build\Orchard\src\Orchard\Settings\CurrentSiteWorkContext.cs:line 13
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Environment.WorkContextImplementation.FindResolverForState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 32
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.WorkContextImplementation.GetState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 28
+   at Orchard.Warmup.Services.WarmupTask.Sweep()
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:41:55,714 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,714 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,714 [18] Orchard.Alias.Implementation.Updater.AliasHolderUpdater - Exception during Alias refresh
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id695_0_, this_.Path as Path695_0_, this_.RouteValues as RouteVal3_695_0_, this_.Source as Source695_0_, this_.Action_id as Action5_695_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc ]
+[SQL: SELECT this_.Id as Id695_0_, this_.Path as Path695_0_, this_.RouteValues as RouteVal3_695_0_, this_.Source as Source695_0_, this_.Action_id as Action5_695_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Alias.Implementation.Storage.AliasStorage.List()
+   at Orchard.Alias.Implementation.Updater.AliasHolderUpdater.Refresh()
+2012-10-29 15:41:55,724 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,724 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,724 [18] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id725_0_, this_.TaskType as TaskType725_0_, this_.ScheduledUtc as Schedule3_725_0_, this_.ContentItemVersionRecord_id as ContentI4_725_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ? ]
+Positional parameters:  #0>29.10.2012 13:41:55
+[SQL: SELECT this_.Id as Id725_0_, this_.TaskType as TaskType725_0_, this_.ScheduledUtc as Schedule3_725_0_, this_.ContentItemVersionRecord_id as ContentI4_725_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ?] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Orchard.Core.Scheduling.Services.ScheduledTaskExecutor.Sweep() in c:\Build\Orchard\src\Orchard.Web\Core\Scheduling\Services\ScheduledTaskExecutor.cs:line 36
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:41:55,724 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,724 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,724 [18] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id771_4_, this_.Number as Number771_4_, this_.Published as Published771_4_, this_.Latest as Latest771_4_, this_.Data as Data771_4_, this_.ContentItemRecord_id as ContentI6_771_4_, titlepartr3_.Id as Id697_0_, titlepartr3_.Title as Title697_0_, titlepartr3_.ContentItemRecord_id as ContentI3_697_0_, contentite1_.Id as Id770_1_, contentite1_.Data as Data770_1_, contentite1_.ContentType_id as ContentT3_770_1_, blogpartre2_.Id as Id737_2_, blogpartre2_.Description as Descript2_737_2_, blogpartre2_.PostCount as PostCount737_2_, contenttyp8_.Id as Id772_3_, contenttyp8_.Name as Name772_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = ? ORDER BY titlepartr3_.Title asc ]
+Positional parameters:  #0>True
+[SQL: SELECT this_.Id as Id771_4_, this_.Number as Number771_4_, this_.Published as Published771_4_, this_.Latest as Latest771_4_, this_.Data as Data771_4_, this_.ContentItemRecord_id as ContentI6_771_4_, titlepartr3_.Id as Id697_0_, titlepartr3_.Title as Title697_0_, titlepartr3_.ContentItemRecord_id as ContentI3_697_0_, contentite1_.Id as Id770_1_, contentite1_.Data as Data770_1_, contentite1_.ContentType_id as ContentT3_770_1_, blogpartre2_.Id as Id737_2_, blogpartre2_.Description as Descript2_737_2_, blogpartre2_.PostCount as PostCount737_2_, contenttyp8_.Id as Id772_3_, contenttyp8_.Name as Name772_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = ? ORDER BY titlepartr3_.Title asc] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentQuery.ContentQuery`1.Orchard.ContentManagement.IContentQuery<T>.List() in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 191
+   at Orchard.Blogs.Services.BlogService.Get(VersionOptions versionOptions)
+   at Orchard.Blogs.Routing.BlogPathConstraintUpdator.Refresh()
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:41:55,734 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,734 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:41:55,734 [18] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id771_3_, this_.Number as Number771_3_, this_.Published as Published771_3_, this_.Latest as Latest771_3_, this_.Data as Data771_3_, this_.ContentItemRecord_id as ContentI6_771_3_, contentite1_.Id as Id770_0_, contentite1_.Data as Data770_0_, contentite1_.ContentType_id as ContentT3_770_0_, sitesettin4_.Id as Id711_1_, sitesettin4_.SiteSalt as SiteSalt711_1_, sitesettin4_.SiteName as SiteName711_1_, sitesettin4_.SuperUser as SuperUser711_1_, sitesettin4_.PageTitleSeparator as PageTitl5_711_1_, sitesettin4_.HomePage as HomePage711_1_, sitesettin4_.SiteCulture as SiteCult7_711_1_, sitesettin4_.ResourceDebugMode as Resource8_711_1_, sitesettin4_.PageSize as PageSize711_1_, sitesettin4_.SiteTimeZone as SiteTim10_711_1_, contenttyp5_.Id as Id772_2_, contenttyp5_.Name as Name772_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ? ]
+Positional parameters:  #0>1 #1>True
+[SQL: SELECT this_.Id as Id771_3_, this_.Number as Number771_3_, this_.Published as Published771_3_, this_.Latest as Latest771_3_, this_.Data as Data771_3_, this_.ContentItemRecord_id as ContentI6_771_3_, contentite1_.Id as Id770_0_, contentite1_.Data as Data770_0_, contentite1_.ContentType_id as ContentT3_770_0_, sitesettin4_.Id as Id711_1_, sitesettin4_.SiteSalt as SiteSalt711_1_, sitesettin4_.SiteName as SiteName711_1_, sitesettin4_.SuperUser as SuperUser711_1_, sitesettin4_.PageTitleSeparator as PageTitl5_711_1_, sitesettin4_.HomePage as HomePage711_1_, sitesettin4_.SiteCulture as SiteCult7_711_1_, sitesettin4_.ResourceDebugMode as Resource8_711_1_, sitesettin4_.PageSize as PageSize711_1_, sitesettin4_.SiteTimeZone as SiteTim10_711_1_, contenttyp5_.Id as Id772_2_, contenttyp5_.Name as Name772_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ?] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentManager.GetManyImplementation(QueryHints hints, Action`2 predicate) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 328
+   at Orchard.ContentManagement.DefaultContentManager.Get(Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 140
+   at Orchard.ContentManagement.ContentGetExtensions.Get[T](IContentManager manager, Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentExtensions.cs:line 160
+   at Orchard.Core.Settings.Services.SiteService.GetSiteSettings() in c:\Build\Orchard\src\Orchard.Web\Core\Settings\Services\SiteService.cs:line 46
+   at Orchard.Settings.CurrentSiteWorkContext.Get[T](String name) in c:\Build\Orchard\src\Orchard\Settings\CurrentSiteWorkContext.cs:line 13
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Environment.WorkContextImplementation.FindResolverForState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 32
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.WorkContextImplementation.GetState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 28
+   at Orchard.Warmup.Services.WarmupTask.Sweep()
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:42:55,999 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:55,999 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:55,999 [18] Orchard.Alias.Implementation.Updater.AliasHolderUpdater - Exception during Alias refresh
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id695_0_, this_.Path as Path695_0_, this_.RouteValues as RouteVal3_695_0_, this_.Source as Source695_0_, this_.Action_id as Action5_695_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc ]
+[SQL: SELECT this_.Id as Id695_0_, this_.Path as Path695_0_, this_.RouteValues as RouteVal3_695_0_, this_.Source as Source695_0_, this_.Action_id as Action5_695_0_ FROM Orchard_Alias_AliasRecord this_ ORDER BY this_.Id asc] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Alias.Implementation.Storage.AliasStorage.List()
+   at Orchard.Alias.Implementation.Updater.AliasHolderUpdater.Refresh()
+2012-10-29 15:42:55,999 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:55,999 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:55,999 [18] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id725_0_, this_.TaskType as TaskType725_0_, this_.ScheduledUtc as Schedule3_725_0_, this_.ContentItemVersionRecord_id as ContentI4_725_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ? ]
+Positional parameters:  #0>29.10.2012 13:42:55
+[SQL: SELECT this_.Id as Id725_0_, this_.TaskType as TaskType725_0_, this_.ScheduledUtc as Schedule3_725_0_, this_.ContentItemVersionRecord_id as ContentI4_725_0_ FROM Scheduling_ScheduledTaskRecord this_ WHERE this_.ScheduledUtc <= ?] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Orchard.Core.Scheduling.Services.ScheduledTaskExecutor.Sweep() in c:\Build\Orchard\src\Orchard.Web\Core\Scheduling\Services\ScheduledTaskExecutor.cs:line 36
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:42:55,999 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:55,999 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:56,009 [18] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id771_4_, this_.Number as Number771_4_, this_.Published as Published771_4_, this_.Latest as Latest771_4_, this_.Data as Data771_4_, this_.ContentItemRecord_id as ContentI6_771_4_, titlepartr3_.Id as Id697_0_, titlepartr3_.Title as Title697_0_, titlepartr3_.ContentItemRecord_id as ContentI3_697_0_, contentite1_.Id as Id770_1_, contentite1_.Data as Data770_1_, contentite1_.ContentType_id as ContentT3_770_1_, blogpartre2_.Id as Id737_2_, blogpartre2_.Description as Descript2_737_2_, blogpartre2_.PostCount as PostCount737_2_, contenttyp8_.Id as Id772_3_, contenttyp8_.Name as Name772_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = ? ORDER BY titlepartr3_.Title asc ]
+Positional parameters:  #0>True
+[SQL: SELECT this_.Id as Id771_4_, this_.Number as Number771_4_, this_.Published as Published771_4_, this_.Latest as Latest771_4_, this_.Data as Data771_4_, this_.ContentItemRecord_id as ContentI6_771_4_, titlepartr3_.Id as Id697_0_, titlepartr3_.Title as Title697_0_, titlepartr3_.ContentItemRecord_id as ContentI3_697_0_, contentite1_.Id as Id770_1_, contentite1_.Data as Data770_1_, contentite1_.ContentType_id as ContentT3_770_1_, blogpartre2_.Id as Id737_2_, blogpartre2_.Description as Descript2_737_2_, blogpartre2_.PostCount as PostCount737_2_, contenttyp8_.Id as Id772_3_, contenttyp8_.Name as Name772_3_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Title_TitlePartRecord titlepartr3_ on this_.Id=titlepartr3_.Id inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id inner join Orchard_Blogs_BlogPartRecord blogpartre2_ on contentite1_.Id=blogpartre2_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp8_ on contentite1_.ContentType_id=contenttyp8_.Id WHERE this_.Published = ? ORDER BY titlepartr3_.Title asc] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentQuery.ContentQuery`1.Orchard.ContentManagement.IContentQuery<T>.List() in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 191
+   at Orchard.Blogs.Services.BlogService.Get(VersionOptions versionOptions)
+   at Orchard.Blogs.Routing.BlogPathConstraintUpdator.Refresh()
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 15:42:56,009 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:56,009 [18] NHibernate.Util.ADOExceptionReporter - A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+2012-10-29 15:42:56,009 [18] Orchard.Tasks.BackgroundService - Error while processing background task
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id771_3_, this_.Number as Number771_3_, this_.Published as Published771_3_, this_.Latest as Latest771_3_, this_.Data as Data771_3_, this_.ContentItemRecord_id as ContentI6_771_3_, contentite1_.Id as Id770_0_, contentite1_.Data as Data770_0_, contentite1_.ContentType_id as ContentT3_770_0_, sitesettin4_.Id as Id711_1_, sitesettin4_.SiteSalt as SiteSalt711_1_, sitesettin4_.SiteName as SiteName711_1_, sitesettin4_.SuperUser as SuperUser711_1_, sitesettin4_.PageTitleSeparator as PageTitl5_711_1_, sitesettin4_.HomePage as HomePage711_1_, sitesettin4_.SiteCulture as SiteCult7_711_1_, sitesettin4_.ResourceDebugMode as Resource8_711_1_, sitesettin4_.PageSize as PageSize711_1_, sitesettin4_.SiteTimeZone as SiteTim10_711_1_, contenttyp5_.Id as Id772_2_, contenttyp5_.Name as Name772_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ? ]
+Positional parameters:  #0>1 #1>True
+[SQL: SELECT this_.Id as Id771_3_, this_.Number as Number771_3_, this_.Published as Published771_3_, this_.Latest as Latest771_3_, this_.Data as Data771_3_, this_.ContentItemRecord_id as ContentI6_771_3_, contentite1_.Id as Id770_0_, contentite1_.Data as Data770_0_, contentite1_.ContentType_id as ContentT3_770_0_, sitesettin4_.Id as Id711_1_, sitesettin4_.SiteSalt as SiteSalt711_1_, sitesettin4_.SiteName as SiteName711_1_, sitesettin4_.SuperUser as SuperUser711_1_, sitesettin4_.PageTitleSeparator as PageTitl5_711_1_, sitesettin4_.HomePage as HomePage711_1_, sitesettin4_.SiteCulture as SiteCult7_711_1_, sitesettin4_.ResourceDebugMode as Resource8_711_1_, sitesettin4_.PageSize as PageSize711_1_, sitesettin4_.SiteTimeZone as SiteTim10_711_1_, contenttyp5_.Id as Id772_2_, contenttyp5_.Name as Name772_2_ FROM Orchard_Framework_ContentItemVersionRecord this_ inner join Orchard_Framework_ContentItemRecord contentite1_ on this_.ContentItemRecord_id=contentite1_.Id left outer join Settings_SiteSettingsPartRecord sitesettin4_ on contentite1_.Id=sitesettin4_.Id left outer join Orchard_Framework_ContentTypeRecord contenttyp5_ on contentite1_.ContentType_id=contenttyp5_.Id WHERE contentite1_.Id = ? and this_.Published = ?] ---> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.AdoNet.ConnectionManager.GetConnection()
+   at NHibernate.AdoNet.AbstractBatcher.Prepare(IDbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentManager.GetManyImplementation(QueryHints hints, Action`2 predicate) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 328
+   at Orchard.ContentManagement.DefaultContentManager.Get(Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentManager.cs:line 140
+   at Orchard.ContentManagement.ContentGetExtensions.Get[T](IContentManager manager, Int32 id, VersionOptions options, QueryHints hints) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentExtensions.cs:line 160
+   at Orchard.Core.Settings.Services.SiteService.GetSiteSettings() in c:\Build\Orchard\src\Orchard.Web\Core\Settings\Services\SiteService.cs:line 46
+   at Orchard.Settings.CurrentSiteWorkContext.Get[T](String name) in c:\Build\Orchard\src\Orchard\Settings\CurrentSiteWorkContext.cs:line 13
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Environment.WorkContextImplementation.FindResolverForState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 32
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Orchard.Environment.WorkContextImplementation.GetState[T](String name) in c:\Build\Orchard\src\Orchard\Environment\WorkContextImplementation.cs:line 28
+   at Orchard.Warmup.Services.WarmupTask.Sweep()
+   at Orchard.Tasks.BackgroundService.Sweep() in c:\Build\Orchard\src\Orchard\Tasks\BackgroundService.cs:line 32
+2012-10-29 19:55:44,901 [25] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - QueryException thrown from IContentPartDriver by Contrib.Taxonomies.Drivers.TermWidgetPartDriver
+NHibernate.QueryException: could not resolve property: ContentType of: Orchard.Core.Common.Models.CommonPartRecord
+   at NHibernate.Persister.Entity.AbstractPropertyMapping.ToType(String propertyName)
+   at NHibernate.Persister.Entity.AbstractEntityPersister.GetSubclassPropertyTableNumber(String propertyPath)
+   at NHibernate.Persister.Entity.BasicEntityPropertyMapping.ToColumns(String alias, String propertyName)
+   at NHibernate.Loader.Criteria.CriteriaQueryTranslator.GetColumnsUsingProjection(ICriteria subcriteria, String propertyName)
+   at NHibernate.Criterion.CriterionUtil.GetColumnNamesUsingPropertyName(ICriteriaQuery criteriaQuery, ICriteria criteria, String propertyName, Object value, ICriterion critertion)
+   at NHibernate.Criterion.SimpleExpression.ToSqlString(ICriteria criteria, ICriteriaQuery criteriaQuery, IDictionary`2 enabledFilters)
+   at NHibernate.Loader.Criteria.CriteriaQueryTranslator.GetWhereCondition(IDictionary`2 enabledFilters)
+   at NHibernate.Loader.Criteria.CriteriaJoinWalker..ctor(IOuterJoinLoadable persister, CriteriaQueryTranslator translator, ISessionFactoryImplementor factory, ICriteria criteria, String rootEntityName, IDictionary`2 enabledFilters)
+   at NHibernate.Loader.Criteria.CriteriaLoader..ctor(IOuterJoinLoadable persister, ISessionFactoryImplementor factory, CriteriaImpl rootCriteria, String rootEntityName, IDictionary`2 enabledFilters)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List[T]()
+   at Orchard.ContentManagement.DefaultContentQuery.ContentQuery`1.Orchard.ContentManagement.IContentQuery<T>.Slice(Int32 skip, Int32 count) in c:\Build\Orchard\src\Orchard\ContentManagement\DefaultContentQuery.cs:line 195
+   at Contrib.Taxonomies.Drivers.TermWidgetPartDriver.<>c__DisplayClass6.<Display>b__4() in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TermWidgetPartDriver.cs:line 57
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 19:57:27,779 [27] NHibernate.AdoNet.AbstractBatcher - Could not execute query: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2012-10-29 19:57:27,803 [27] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-29 19:57:27,814 [27] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-29 19:57:27,815 [27] Orchard.ContentManagement.DefaultContentManager - ADOException thrown from IContentHandler by Contrib.Taxonomies.Handlers.TermPartHandler
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0 ]
+Positional parameters:  #0>Orchard.ContentManagement.Records.ContentItemRecord
+[SQL: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0] ---> System.Data.SqlClient.SqlException: Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Contrib.Taxonomies.Services.TaxonomyService.DeleteAssociatedTerms(ContentItem contentItem) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Services\TaxonomyService.cs:line 207
+   at Contrib.Taxonomies.Handlers.TermPartHandler.<>c__DisplayClass8.<.ctor>b__0(RemoveContentContext context, IContent tags) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Handlers\TermPartHandler.cs:line 18
+   at Orchard.ContentManagement.Handlers.ContentHandler.Orchard.ContentManagement.Handlers.IContentHandler.Removed(RemoveContentContext context) in c:\Build\Orchard\src\Orchard\ContentManagement\Handlers\ContentHandler.cs:line 297
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:18:58,601 [19] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:19:04,236 [21] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:19:10,333 [25] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:28:48,902 [19] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:28:54,210 [18] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:29:46,132 [23] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:30:55,874 [23] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:30:56,485 [23] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:30:57,239 [23] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:02,204 [21] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:02,836 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:02,921 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:03,645 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:03,731 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:54,765 [21] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:55,253 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:55,362 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:56,152 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:32:56,262 [21] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:33:07,900 [19] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:33:08,639 [19] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:33:08,757 [19] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:33:43,209 [18] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:33:43,944 [18] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:33:44,051 [18] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:34:09,729 [19] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:34:11,134 [19] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:34:11,249 [19] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:35:53,036 [19] Orchard.Exceptions.DefaultExceptionPolicy - An unexpected exception was caught
+System.ArgumentException: The relative virtual path 'Orchard.Core.Shapes.CoreShapes::List' is not allowed here.
+   at System.Web.Hosting.HostingEnvironment.MapPathActual(VirtualPath virtualPath, Boolean permitNull)
+   at System.Web.Hosting.MapPathBasedVirtualPathProvider.CacheLookupOrInsert(String virtualPath, Boolean isFile)
+   at Orchard.DesignerTools.Controllers.AlternateController.Create(String template, String alternate, String returnUrl) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Controllers\AlternateController.cs:line 35
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass15.<InvokeActionMethodWithFilters>b__12()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethodFilter(IActionFilter filter, ActionExecutingContext preContext, Func`1 continuation)
+2012-10-29 20:35:53,263 [19] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:35:53,593 [19] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:35:53,793 [19] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:36:03,437 [18] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:36:04,845 [18] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:36:04,972 [18] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:36:14,791 [23] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:36:16,193 [23] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-29 20:36:16,305 [23] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17

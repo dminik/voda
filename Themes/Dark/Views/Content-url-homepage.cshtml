@@ -1,0 +1,48 @@
+﻿@using Orchard.Utility.Extensions;
+
+@using (Script.Head())
+{
+	<meta name='yandex-verification' content='5cacfc9073e780b0' />
+	<meta name="google-site-verification" content="_u4OxmV8o7WuNwtHt8M3pXn1SJ-p9Ta1HYdrVB3jE0k" />
+	
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-35878494-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+}
+
+@{
+	if (Model.Title != null)
+	{
+		Layout.Title = Model.Title;
+	}
+
+	var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+}
+<article class="content-item @contentTypeClassName">
+    <header>
+        @Display(Model.Header)
+        @if (Model.Meta != null)
+		{
+        <div class="metadata">
+            @Display(Model.Meta)
+        </div>
+		}
+    </header>
+    @Display(Model.Content)
+    @if (Model.Footer != null)
+	{
+    <footer>
+        @Display(Model.Footer)
+    </footer>
+    }
+</article>

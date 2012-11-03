@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "filter-na-vodu.com.ua", "http://filter-na-vodu.com.ua", "{DF94DC87-76B8-4A50-BB2D-CBDDCE3CECC4}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/filter-na-vodu.com.ua"
+		Debug.AspNetCompiler.PhysicalPath = "..\voda\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\filter-na-vodu.com.ua\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/filter-na-vodu.com.ua"
+		Release.AspNetCompiler.PhysicalPath = "..\voda\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\filter-na-vodu.com.ua\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "D:\!Work\voda\voda\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF94DC87-76B8-4A50-BB2D-CBDDCE3CECC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF94DC87-76B8-4A50-BB2D-CBDDCE3CECC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

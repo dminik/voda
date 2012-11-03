@@ -1,0 +1,550 @@
+2012-10-28 13:40:16,683 [32] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - ArgumentNullException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.ArgumentNullException: Value cannot be null.
+Parameter name: name
+   at Contrib.Taxonomies.Services.TaxonomyService.GetTaxonomyByName(String name) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Services\TaxonomyService.cs:line 63
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 63
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute4[T0,T1,T2,T3,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassc.<BuildEditor>b__b(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 62
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 13:40:17,172 [32] Orchard.ContentTypes.Services.PlacementService - ArgumentNullException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.ArgumentNullException: Value cannot be null.
+Parameter name: name
+   at Contrib.Taxonomies.Services.TaxonomyService.GetTaxonomyByName(String name) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Services\TaxonomyService.cs:line 63
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 63
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentTypes.Services.PlacementService.<>c__DisplayClass16.<GetEditorPlacement>b__15(IContentFieldDriver driver)
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 13:41:11,244 [32] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassc.<BuildEditor>b__b(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 62
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 13:41:34,455 [7] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassc.<BuildEditor>b__b(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 62
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 13:41:55,356 [33] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute4[T0,T1,T2,T3,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3)
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, IUpdateModel updater, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 87
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute5[T0,T1,T2,T3,T4,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass13.<Orchard.ContentManagement.Drivers.IContentFieldDriver.UpdateEditorShape>b__12(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 46
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassf.<UpdateEditor>b__e(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 70
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 13:41:55,616 [24] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassc.<BuildEditor>b__b(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 62
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 19:40:44,576 [21] NHibernate.AdoNet.AbstractBatcher - Could not execute query: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2012-10-28 19:40:44,646 [21] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 19:40:44,652 [21] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 19:40:44,657 [21] Orchard.ContentManagement.DefaultContentManager - ADOException thrown from IContentHandler by Contrib.Taxonomies.Handlers.TermPartHandler
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0 ]
+Positional parameters:  #0>Orchard.ContentManagement.Records.ContentItemRecord
+[SQL: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0] ---> System.Data.SqlClient.SqlException: Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Contrib.Taxonomies.Services.TaxonomyService.DeleteAssociatedTerms(ContentItem contentItem) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Services\TaxonomyService.cs:line 207
+   at Contrib.Taxonomies.Handlers.TermPartHandler.<>c__DisplayClass8.<.ctor>b__0(RemoveContentContext context, IContent tags) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Handlers\TermPartHandler.cs:line 18
+   at Orchard.ContentManagement.Handlers.ContentHandler.Orchard.ContentManagement.Handlers.IContentHandler.Removed(RemoveContentContext context) in c:\Build\Orchard\src\Orchard\ContentManagement\Handlers\ContentHandler.cs:line 297
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 19:41:19,138 [12] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute4[T0,T1,T2,T3,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassc.<BuildEditor>b__b(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 62
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 19:47:14,161 [12] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute4[T0,T1,T2,T3,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3)
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, IUpdateModel updater, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 87
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute5[T0,T1,T2,T3,T4,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass13.<Orchard.ContentManagement.Drivers.IContentFieldDriver.UpdateEditorShape>b__12(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 46
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassf.<UpdateEditor>b__e(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 70
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 19:47:14,462 [20] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassc.<BuildEditor>b__b(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 62
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 19:47:54,939 [12] Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator - NullReferenceException thrown from IContentFieldDriver by Contrib.Taxonomies.Drivers.TaxonomyFieldDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Contrib.Taxonomies.Drivers.TaxonomyFieldDriver.Editor(ContentPart part, TaxonomyField field, Object shapeHelper) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Drivers\TaxonomyFieldDriver.cs:line 64
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClassd.<Orchard.ContentManagement.Drivers.IContentFieldDriver.BuildEditorShape>b__c(ContentPart part, TField field) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 33
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.<>c__DisplayClass2a.<Process>b__28(<>f__AnonymousType4`2 pf) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 87
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Orchard.ContentManagement.Drivers.ContentFieldDriver`1.Process(ContentItem item, Func`3 effort) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentFieldDriver.cs:line 88
+   at Orchard.ContentManagement.Drivers.Coordinators.ContentFieldDriverCoordinator.<>c__DisplayClassc.<BuildEditor>b__b(IContentFieldDriver driver) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\Coordinators\ContentFieldDriverCoordinator.cs:line 62
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 19:57:33,634 [10] NHibernate.AdoNet.AbstractBatcher - Could not execute query: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2012-10-28 19:57:33,635 [10] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 19:57:33,635 [10] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 19:57:33,636 [10] Orchard.ContentManagement.DefaultContentManager - ADOException thrown from IContentHandler by Contrib.Taxonomies.Handlers.TermPartHandler
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0 ]
+Positional parameters:  #0>Orchard.ContentManagement.Records.ContentItemRecord
+[SQL: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0] ---> System.Data.SqlClient.SqlException: Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Contrib.Taxonomies.Services.TaxonomyService.DeleteAssociatedTerms(ContentItem contentItem) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Services\TaxonomyService.cs:line 207
+   at Contrib.Taxonomies.Handlers.TermPartHandler.<>c__DisplayClass8.<.ctor>b__0(RemoveContentContext context, IContent tags) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Handlers\TermPartHandler.cs:line 18
+   at Orchard.ContentManagement.Handlers.ContentHandler.Orchard.ContentManagement.Handlers.IContentHandler.Removed(RemoveContentContext context) in c:\Build\Orchard\src\Orchard\ContentManagement\Handlers\ContentHandler.cs:line 297
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:58,843 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,561 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,564 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,567 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,569 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,572 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,574 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,577 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,580 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:33:59,582 [11] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 20:34:42,552 [20] NHibernate.AdoNet.AbstractBatcher - Could not execute query: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2012-10-28 20:34:42,556 [20] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 20:34:42,561 [20] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 20:34:42,562 [20] Orchard.ContentManagement.DefaultContentManager - ADOException thrown from IContentHandler by Contrib.Taxonomies.Handlers.TermPartHandler
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0 ]
+Positional parameters:  #0>Orchard.ContentManagement.Records.ContentItemRecord
+[SQL: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0] ---> System.Data.SqlClient.SqlException: Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Contrib.Taxonomies.Services.TaxonomyService.DeleteAssociatedTerms(ContentItem contentItem) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Services\TaxonomyService.cs:line 207
+   at Contrib.Taxonomies.Handlers.TermPartHandler.<>c__DisplayClass8.<.ctor>b__0(RemoveContentContext context, IContent tags) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Handlers\TermPartHandler.cs:line 18
+   at Orchard.ContentManagement.Handlers.ContentHandler.Orchard.ContentManagement.Handlers.IContentHandler.Removed(RemoveContentContext context) in c:\Build\Orchard\src\Orchard\ContentManagement\Handlers\ContentHandler.cs:line 297
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:52,556 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:52,991 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:52,994 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:52,997 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:52,999 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:53,005 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:53,008 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:53,010 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:53,013 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:56:53,016 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,225 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,228 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,231 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,234 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,238 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,241 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,243 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,246 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,248 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 21:57:45,250 [7] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 22:16:42,018 [14] NHibernate.AdoNet.AbstractBatcher - Could not execute query: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+2012-10-28 22:16:42,024 [14] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 22:16:42,031 [14] NHibernate.Util.ADOExceptionReporter - Must declare the scalar variable "@p0".
+2012-10-28 22:16:42,031 [14] Orchard.ContentManagement.DefaultContentManager - ADOException thrown from IContentHandler by Contrib.Taxonomies.Handlers.TermPartHandler
+NHibernate.ADOException: could not execute query
+[ SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0 ]
+Positional parameters:  #0>Orchard.ContentManagement.Records.ContentItemRecord
+[SQL: SELECT this_.Id as Id702_2_, this_.Field as Field702_2_, this_.TermRecord_id as TermRecord3_702_2_, this_.TermsPartRecord_id as TermsPar4_702_2_, termspartr1_.Id as Id698_0_, contentite2_.Id as Id770_1_, contentite2_.Data as Data770_1_, contentite2_.ContentType_id as ContentT3_770_1_ FROM Contrib_Taxonomies_TermContentItem this_ left outer join Contrib_Taxonomies_TermsPartRecord termspartr1_ on this_.TermsPartRecord_id=termspartr1_.Id left outer join Orchard_Framework_ContentItemRecord contentite2_ on termspartr1_.Id=contentite2_.Id WHERE termspartr1_.Id = @p0] ---> System.Data.SqlClient.SqlException: Must declare the scalar variable "@p0".
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(IDbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(IDbCommand st, Boolean autoDiscoverTypes, Boolean callable, RowSelection selection, ISessionImplementor session)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Criteria.CriteriaLoader.List(ISessionImplementor session)
+   at NHibernate.Impl.SessionImpl.List(CriteriaImpl criteria, IList results)
+   at NHibernate.Impl.CriteriaImpl.List(IList results)
+   at NHibernate.Impl.CriteriaImpl.List()
+   at NHibernate.Linq.CriteriaResultReader`1.<GetEnumerator>d__0.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Orchard.Utility.Extensions.ReadOnlyCollectionExtensions.ToReadOnlyCollection[T](IEnumerable`1 enumerable) in c:\Build\Orchard\src\Orchard\Utility\Extensions\ReadOnlyCollectionExtensions.cs:line 8
+   at Orchard.Data.Repository`1.Orchard.Data.IRepository<T>.Fetch(Expression`1 predicate) in c:\Build\Orchard\src\Orchard\Data\Repository.cs:line 72
+   at Contrib.Taxonomies.Services.TaxonomyService.DeleteAssociatedTerms(ContentItem contentItem) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Services\TaxonomyService.cs:line 207
+   at Contrib.Taxonomies.Handlers.TermPartHandler.<>c__DisplayClass8.<.ctor>b__0(RemoveContentContext context, IContent tags) in d:\!Work\voda\voda\Modules\Contrib.Taxonomies\Handlers\TermPartHandler.cs:line 18
+   at Orchard.ContentManagement.Handlers.ContentHandler.Orchard.ContentManagement.Handlers.IContentHandler.Removed(RemoveContentContext context) in c:\Build\Orchard\src\Orchard\ContentManagement\Handlers\ContentHandler.cs:line 297
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:18,569 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,259 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,263 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,266 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,268 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,271 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,275 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,277 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,280 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-28 23:13:19,283 [20] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: Cannot implicitly convert type 'Orchard.Modules.Models.ModuleEntry' to 'Orchard.ContentManagement.ContentPart'
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.DesignerTools.Services.WidgetAlternatesFactory.<Displaying>b__5(ShapeDisplayingContext displayedContext) in d:\!Work\voda\voda\Modules\Orchard.DesignerTools\Services\WidgetAlternatesFactory.cs:line 18
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17

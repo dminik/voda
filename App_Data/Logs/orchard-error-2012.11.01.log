@@ -1,0 +1,54 @@
+2012-11-01 12:01:15,857 [25] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-11-01 12:01:17,812 [25] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-11-01 12:01:17,854 [25] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-11-01 15:05:37,814 [37] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - NullReferenceException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 83
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-11-01 15:05:39,813 [37] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute1[T0,TRet](CallSite site, T0 arg0)
+   at CallSite.Target(Closure , CallSite , Object )
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-11-01 15:05:39,860 [37] Orchard.DisplayManagement.Implementation.DefaultDisplayManager - RuntimeBinderException thrown from Action`1 by System.Action`1[[Orchard.DisplayManagement.Implementation.ShapeDisplayingContext, Orchard.Framework, Version=1.5.1.0, Culture=neutral, PublicKeyToken=null]]
+Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Orchard.ContentManagement.ContentItem' does not contain a definition for 'ContentItem'
+   at lambda_method(Closure )
+   at Orchard.ContentManagement.ContentItemBehavior.GetMemberMissing(Func`1 proceed, Object self, String name) in c:\Build\Orchard\src\Orchard\ContentManagement\ContentItemBehavior.cs:line 14
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at ClaySharp.ClayBehavior.GetMember(Func`1 proceed, Object self, String name) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehavior.cs:line 8
+   at ClaySharp.ClayBehaviorCollection.Execute(Func`1 proceed, Func`3 linker) in C:\Users\sebros\My Projects\Clay\src\ClaySharp\ClayBehaviorCollection.cs:line 13
+   at Orchard.Core.Shapes.CoreShapes.<Discover>b__8c(ShapeDisplayingContext displaying) in c:\Build\Orchard\src\Orchard.Web\Core\Shapes\CoreShapes.cs:line 103
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17

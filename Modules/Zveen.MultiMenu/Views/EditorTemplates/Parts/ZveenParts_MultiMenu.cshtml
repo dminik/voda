@@ -1,0 +1,136 @@
+﻿@model Zveen.MultiMenu.Models.MultiMenuPart
+@using (Script.Foot())
+{ 
+    @Script.Require("jQuery")
+    <script type="text/javascript">
+        $().ready(function () {
+            $('#zveen-multi-preconfigured').change(function () {
+                if ($(this).val() == 'none') {
+                    $('#@Html.FieldIdFor( x => x.Includes )').val('');
+                }
+                if ($(this).val() == 'hor') {
+                    $('#@Html.FieldIdFor( x => x.Includes )').val(
+                        '{superfish.js}\n' +
+                        '{supersubs.js}\n' +
+                        '{hoverIntent.js}\n' +
+                        '{superfish.css}\n'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.Script )').val(
+                        '$("#{Id} ul.sf-menu").supersubs({ \n' +
+                        '    minWidth:    12,\n' +
+                        '    maxWidth:    27\n' +
+                        '}).superfish();'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.BeforeHtml )').val(
+                        '<div id=\"{Id}\">\n' +
+                        '    <ul class="sf-menu">'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.ElementHtml )').val(
+                        '<a href=\"{Url}\" >{Title}</a>'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.AfterHtml )').val(
+                        '    </ul>\n' +
+                        '</div>'
+                    ); 
+                }
+                if ($(this).val() == 'ver') {
+                    $('#@Html.FieldIdFor( x => x.Includes )').val(
+                        '{superfish.js}\n' +
+                        '{supersubs.js}\n' +
+                        '{hoverIntent.js}\n' +
+                        '{superfish.css}\n' +
+                        '{superfish-vertical.css}\n'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.Script )').val(
+                        '$("#{Id} ul.sf-menu").supersubs({ \n' +
+                        '    minWidth:    12,\n' +
+                        '    maxWidth:    27\n' +
+                        '}).superfish();'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.BeforeHtml )').val(
+                        '<div id=\"{Id}\">\n' +
+                        '    <ul class="sf-menu sf-vertical">'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.ElementHtml )').val(
+                        '<a href=\"{Url}\" >{Title}</a>'
+                    );
+
+                    $('#@Html.FieldIdFor( x => x.AfterHtml )').val(
+                        '    </ul>\n' +
+                        '</div>'
+                    ); 
+                } 
+
+            });
+        });
+    </script>
+}
+
+<fieldset>
+    <div>
+        <p>@T("Select preconfigured menu settings or feel free to experiment yourself. Menus are based on superfish menu (") <a href="http://users.tpg.com.au/j_birch/plugins/superfish/">http://users.tpg.com.au/j_birch/plugins/superfish/</a> @T(") - check it out for additional options.")</p>
+        <select id="zveen-multi-preconfigured">
+            <option value="none">None</option>
+            <option value="hor">Horizontal</option>
+            <option value="ver">Vertical</option>
+        </select>
+    </div>
+    <hr />
+    <div>
+        @Html.LabelFor(m => m.Includes, T("Include required scripts and styles here, you can paste custom stylesheet below"))
+        <p><em>
+            @T("For superfish.js enter: ") {superfish.js}<br />
+            @T("For supersubs.js enter: ") {supersubs.js}<br />
+            @T("For hoverIntent.js enter: ") {hoverIntent.js}<br />
+            @T("For specialized superfish.css enter: ") {superfish.css}<br />
+            @T("For specialized superfish-vertical.css enter: ") {superfish-vertical.css}<br />
+        </em></p>
+        @Html.TextAreaFor(m => m.Includes, 6, 60, null)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Script, T("Enter initialization scripts here"))
+        <p><em>
+            @T("{Id} is replaced with actual id of this menu")
+        </em></p>
+        @Html.TextAreaFor(m => m.Script, 6, 60, null)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.BeforeHtml, T("Html before rendering of elements. Dont forget to include ul element as wrapper!"))
+        <p><em>
+            @T("{Id} is replaced with actual id of this menu")
+        </em></p>
+        @Html.TextAreaFor(m => m.BeforeHtml, 6, 60, null)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.ElementHtml, T("Elements are rendered using this html string. We replace {Url}, {Title} tags with actual contents!"))
+        <p>
+            <b>@("i.e. <a href=\"{Url}\" >{Title}</a>")</b> @T("is rendered as") <br />
+                @("<a href=\"www.zveen.com\">Zveen Team</a>") 
+        </p>
+        @Html.TextBoxFor(m => m.ElementHtml, new { @class = "text large" })
+    </div>
+	<div>
+        @Html.LabelFor(m => m.ElementHtmlLevel2, T("Second level elements are rendered using this html string. Leave empty to use 1st level element html"))
+        @Html.TextBoxFor(m => m.ElementHtmlLevel2, new { @class = "text large" })
+    </div>
+	<div>
+        @Html.LabelFor(m => m.ElementHtmlLevel3, T("Third level elements are rendered using this html string. Leave empty to use 1st or 2nd level element html"))
+        @Html.TextBoxFor(m => m.ElementHtmlLevel3, new { @class = "text large" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.AfterHtml, T("Html after rendering of elements. Dont forget to include closing ul element!"))
+        @Html.TextAreaFor(m => m.AfterHtml, 6, 60, null)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Style, T("Additional style sheet for your menu"))
+        @Html.TextAreaFor(m => m.Style, 6,60, null)
+    </div>
+    
+</fieldset>

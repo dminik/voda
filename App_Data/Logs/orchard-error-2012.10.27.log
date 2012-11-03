@@ -1,0 +1,27 @@
+2012-10-27 12:10:07,481 [19] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - ArgumentNullException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 122
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-27 12:10:29,210 [6] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - ArgumentNullException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 122
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17
+2012-10-27 12:11:20,256 [19] Orchard.ContentManagement.Drivers.Coordinators.ContentPartDriverCoordinator - ArgumentNullException thrown from IContentPartDriver by Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Where[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Orchard.Core.Navigation.Drivers.MenuWidgetPartDriver.<>c__DisplayClass9.<Display>b__7() in c:\Build\Orchard\src\Orchard.Web\Core\Navigation\Drivers\MenuWidgetPartDriver.cs:line 122
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClassf.<ContentShape>b__e(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 129
+   at Orchard.ContentManagement.Drivers.ContentPartDriver`1.<>c__DisplayClass15.<ContentShapeImplementation>b__14(BuildShapeContext ctx) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentPartDriver.cs:line 138
+   at Orchard.ContentManagement.Drivers.ContentShapeResult.ApplyImplementation(BuildShapeContext context, String displayType) in c:\Build\Orchard\src\Orchard\ContentManagement\Drivers\ContentShapeResult.cs:line 39
+   at Orchard.InvokeExtensions.Invoke[TEvents](IEnumerable`1 events, Action`1 dispatch, ILogger logger) in c:\Build\Orchard\src\Orchard\InvokeExtensions.cs:line 17

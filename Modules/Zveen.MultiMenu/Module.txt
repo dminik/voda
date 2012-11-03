@@ -1,0 +1,12 @@
+Name: Zveen.MultiMenu
+AntiForgery: enabled
+Author: Zveen Zveen Team
+Website: http://www.zveen.com
+Version: 1.0
+OrchardVersion: 1.1
+Description: MultiMenu is a provides the ability to create multiple navigation menus on the site with custom stylesheet as widget.
+Features:
+    Zveen.MultiMenu:
+        Description: MultiMenu is a provides the ability to create multiple navigation menus on the site with custom stylesheet as widget. With it, it's possible to create, edit, style and place the menus right where you need them. Also, submenus are supported.
+		Dependencies: Orchard.jQuery
+		Category: Navigation	
